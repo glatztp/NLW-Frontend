@@ -1,69 +1,111 @@
-# React + TypeScript + Vite
+Here's your `README.md` formatted with Markdown:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-----
 
-Currently, two official plugins are available:
+# Projeto Frontend - Aplicação de Perguntas e Respostas com IA
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Visão Geral
 
-## Expanding the ESLint configuration
+Este projeto frontend é uma aplicação **React** moderna, construída para fornecer uma interface intuitiva, acessível e responsiva para interação com um backend que processa perguntas e gera respostas usando IA. A interface prioriza a experiência do usuário com design **clean**, comunicação clara e performance otimizada.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-----
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tecnologias Utilizadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+  * **React 18+**: (functional components + hooks)
+  * **TypeScript**: Para tipagem estática e segurança.
+  * **Tailwind CSS**: Para estilização utilitária e responsiva.
+  * **React Query (TanStack Query)**: Para gerenciamento de estado remoto e cache.
+  * **Phosphor / Lucide Icons**: Para ícones vetoriais.
+  * **dayjs**: Para manipulação de datas e timestamps.
+  * **Framer Motion** (opcional): Para animações sutis.
+  * **Vite**: Como bundler e dev server para alta performance.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+-----
+
+## Estrutura do Projeto
+
+```
+/src
+├── /components # Componentes React reutilizáveis (botões, formulários, cards)
+├── /hooks      # Custom hooks para lógica de negócio e integração API
+├── /http       # Abstração de chamadas API (React Query hooks)
+├── /lib        # Bibliotecas utilitárias (ex: dayjs config)
+├── /pages      # Páginas e layouts
+├── /styles     # Arquivos Tailwind customizados ou CSS adicionais
+└── main.tsx    # Entrada da aplicação React
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+-----
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Como Rodar Localmente
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Pré-requisitos
+
+  * Node.js 18 ou superior
+  * Yarn ou npm instalado
+
+### Passos
+
+1.  **Clone o repositório:**
+
+    ```bash
+    git clone <URL_DO_REPOSITORIO_FRONTEND>
+    cd frontend
+    ```
+
+2.  **Instale as dependências:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Configure variáveis de ambiente** conforme `.env.example` (ex: URL do backend).
+
+4.  **Inicie o servidor de desenvolvimento:**
+
+    ```bash
+    npm run dev
+    ```
+
+5.  **Abra o navegador** e acesse `http://localhost:5173`.
+
+-----
+
+## Como Usar
+
+  * **Preencha o formulário** para criar novas salas.
+  * **Acompanhe a lista** de salas criadas.
+  * **Acesse uma sala** para enviar perguntas.
+  * **Veja as respostas** geradas pela IA atualizadas em tempo real.
+  * **Likes e visitas** são persistidos no `localStorage` para melhor experiência.
+
+-----
+
+## Boas Práticas Adotadas
+
+  * **Componentização fina** para facilitar manutenção e reutilização.
+  * **Código limpo, DRY** e com tipagem completa.
+  * Uso de **React Query** para otimizar chamadas API e cache inteligente.
+  * **UI acessível** com contraste e hierarquia visual clara.
+  * **Responsividade mobile-first** com Tailwind CSS.
+  * **Feedback visual consistente** (loading states, animações).
+  * **Tratamento robusto de erros** na UI.
+
+-----
+
+## Testes
+
+Atualmente o projeto **não possui testes automatizados**. Recomenda-se implementar testes unitários com Jest e testes de integração com React Testing Library.
+
+-----
+
+## Deploy
+
+Pode ser facilmente deployado em serviços como **Vercel, Netlify** ou qualquer host estático com suporte a SPA.
+
+-----
+
+## Contato
+
+Para dúvidas ou contribuições, favor abrir uma **issue** ou **pull request** no repositório.
