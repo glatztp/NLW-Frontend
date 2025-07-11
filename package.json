@@ -11,8 +11,12 @@
   "dependencies": {
     "@google/genai": "^1.8.0",
     "@hookform/resolvers": "^5.1.1",
+    "@phosphor-icons/react": "github:phosphor-icons/react",
+    "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-scroll-area": "^1.2.9",
     "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-toggle": "^1.1.9",
     "@tailwindcss/vite": "^4.1.11",
     "@tanstack/react-query": "^5.81.5",
     "class-variance-authority": "^0.7.1",
@@ -31,7 +35,6 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.6",
     "@types/node": "^24.0.10",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
