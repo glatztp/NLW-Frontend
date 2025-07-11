@@ -1,8 +1,5 @@
-Here's your `README.md` formatted with Markdown:
 
------
-
-# Projeto Frontend - Aplicação de Perguntas e Respostas com IA
+# Projeto Frontend - Aplicação de Perguntas e Respostas com IA - NLW-Agents - RocketSeat
 
 ## Visão Geral
 
